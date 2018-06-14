@@ -28,8 +28,11 @@ while (user != "n") {
           BCalc.result = BCalc.num1 / BCalc.num2;
           alert(BCalc.result);
         },
+        power: function (num1,num2,result) {
+        BCalc.result = BCalc.num1 ^ BCalc.num2;
+        alert(bCalc.result);
+      },
       }
-
       var ops = ops;
       switch (BCalc.ops) {
         case "+":
@@ -54,13 +57,55 @@ while (user != "n") {
     options = prompt("Would you like power & modulus (p) or BMI (b)?")
       switch (options) {
         case "p":
-          num1();
-          break;
-        default:
-          alert("please try again");
+        var BCalc = {
+            num1: parseFloat(prompt("Whats your first number?")),
+            num2: parseFloat(prompt("Whats your second number?")),
+            ops: prompt("Whats your operation Add(a), Subtract(s), Multiply(m), Divide(d)"),
+            result: 0,
+            add: function(num1,num2,result) {
+              BCalc.result = BCalc.num1 + BCalc.num2;
+              alert(BCalc.result);
+            },
+            subtract: function(num1,num2,result) {
+              BCalc.result = BCalc.num1 - BCalc.num2;
+              alert(Bcalc.result);
+            },
+            multiply: function(num1,num2,result) {
+              BCalc.result = BCalc.num1 * BCalc.num2;
+              alert(BCalc.result);
+            },
+            divide: function(num1,num2,result) {
+              BCalc.result = BCalc.num1 / BCalc.num2;
+              alert(BCalc.result);
+            },
+            power: function (num1,num2,result) {
+            BCalc.result = BCalc.num1 ^ BCalc.num2;
+            alert(BCalc.result);
+          },
+          }
+          var ops = ops;
+          switch (BCalc.ops) {
+            case "+":
+            BCalc.add();
+            break;
+            case "-":
+            BCalc.subtract();
+            break;
+            case "*":
+            BCalc.multiply();
+            break;
+            case "/":
+            BCalc.divide();
+            break;
+            case "^":
+            BCalc.power();
+            break;
+            default:
+            alert ("invalid input please try again");
+            break;
+          }
       }
       var user = prompt("New calculation(y) or quit(n)?");
-  }var user = prompt("New calculation(y) or quit(n)?");
 }
 
 
